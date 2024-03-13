@@ -72,3 +72,21 @@
 .linkBarLink:hover, .linkBarLink:focus{
     box-shadow:inset 1px 1px 5px var(--black); 
 }
+
+@media only screen and (min-width: 320px) and (max-width:1024px){
+    #appBarContainer{
+        width: 90%;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .appBarLink{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #avatar{
+        display: none;
+    }
+}

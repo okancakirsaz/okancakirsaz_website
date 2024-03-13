@@ -24,3 +24,48 @@
     font-family: var(--anta-font);
 }
 
+@media only screen and (min-width: 320px) and (max-width:765px){
+    .tagcloud{
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #aboutMeAndAbilitiesRow{
+        width: 100%;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+
+    #aboutMeContainer{
+        font-size: 15px;
+        width: 90%;
+        height: 500px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (min-width: 765px) and (max-width:1024px){
+    .tagcloud{
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #aboutMeAndAbilitiesRow{
+        width: 100%;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+
+    #aboutMeContainer{
+        font-size: 17px;
+        width: 90%;
+        min-height: 300;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 5%;
+    }
+}

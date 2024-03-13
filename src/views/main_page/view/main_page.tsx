@@ -14,7 +14,6 @@ export default function MainView() {
   return (
     <>
     <AppBar/>
-    <div style={{height:"50px"}}></div>
     <div id="aboutMeAndAbilitiesRow">
     <div id="aboutMeContainer">
       <h3>About Me</h3>

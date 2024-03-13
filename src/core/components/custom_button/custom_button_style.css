@@ -1,0 +1,23 @@
+.customButton{
+    padding: 10px;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: 18px;
+    font-family: var(--anta-font);
+    color: var(--white);
+    border: 2px solid;
+    border-radius: 200px;
+    background: linear-gradient(to left, var(--primary-color),  var(--secondary-color));
+    background-size: 400% 400%;
+    cursor: pointer;
+}
+
+.customButton:hover, .customButton:active{
+    animation: buttonAnim 2s infinite;
+}
+
+@keyframes buttonAnim {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}

@@ -21,7 +21,7 @@ export const AppBar = () => {
     <nav id='linkBarContainer'>
     <LinkBarLink route='https://medium.com/@ocakirsaz' icon={AssetConsts.instance.medium}/>
     <LinkBarLink route='https://www.instagram.com/ismetokan.exe/' icon={AssetConsts.instance.instagram}/>
-    <LinkBarLink route='https://www.instagram.com/ismetokan.exe/' icon={AssetConsts.instance.github}/>
+    <LinkBarLink route='https://github.com/okancakirsaz' icon={AssetConsts.instance.github}/>
     </nav>
     </section>
     

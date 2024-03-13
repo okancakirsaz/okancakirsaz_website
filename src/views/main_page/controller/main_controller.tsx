@@ -26,7 +26,7 @@ export class MainController extends BaseController {
   getTagCloudSize():number{
     const screenSize:number = window.screen.width;
 
-    if(screenSize<=1024){
+    if(screenSize<=765){
      return 170;
     }
     else {
