@@ -1,0 +1,27 @@
+.customSpecialButton{
+    font-family: "Montserrat", sans-serif;
+    border-radius: 15px;
+    max-width: fit-content;
+    min-width: 60px;
+    height: 40px;
+    background-color: #f4f4f4;
+    border: none;
+    padding-left: 13px;
+    padding-right: 13px;
+    box-shadow:-4px 2px #CA5454;
+    cursor: pointer;
+}
+
+.customSpecialButton:hover, .customSpecialButton:active{
+    box-shadow: inset 4px -2px #CA5454;
+}
+
+@media only screen and (max-width:765px){
+   .customSpecialButton{
+    font-size: 13px;
+    height: 37px;
+    min-width: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+   }
+}
