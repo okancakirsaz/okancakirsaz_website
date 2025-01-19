@@ -1,8 +1,22 @@
+.mainSection{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 280px;
+gap: 10px;
 
+}
+
+.welcomeSection{
+    grid-column: 1;
+    grid-row: 1;
+    height: max-content;
+}
 
 .blogSection{
+    grid-column: 1;
+    grid-row: 2;
     width: 550px;
-    margin: 20px;
+    margin-top: 20px;
     margin-left: 65px;
 }
 
@@ -15,10 +29,11 @@
     display: flex;
 }
 
-.blogTitle{
+.sectionTitle{
     font-family: "Passion One", sans-serif;
     font-size: 30px;
     display: flex;
+    color: black;
     justify-content: space-between;
 }
 
@@ -34,9 +49,10 @@
 
 
 .aboutMeSection{
-    background-color: red;
-    width: 40%;
-    height: 500px;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 60px;
+    height: max-content;
     text-align: center;
     color:white;
     border-radius: 40px;
@@ -44,7 +60,12 @@
 
 @media only screen and (max-width:750px) {
 
+    .mainSection{
+        display: block;
+    }
+
     .blogSection{
+        
         width: 90%;
         margin: 15px;
     } 
@@ -63,5 +84,11 @@
         flex-wrap: nowrap;
         gap: 10px;
         scroll-behavior: smooth; 
+    }
+
+    .aboutMeSection{
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
