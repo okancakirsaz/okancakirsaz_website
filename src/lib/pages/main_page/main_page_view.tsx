@@ -2,6 +2,7 @@ import BlogPreview from "../../core/components/blog_preview/blog_preview";
 import Welcome from "./components/welcome/welcome";
 import "./main_page_view.css";
 import AboutMePart from './components/about_me/about_me_part';
+import CustomSpecialButton from "../../core/components/custom_special_button/custom_special_button";
 
 export default function MainPageView(){
 return (
@@ -28,6 +29,13 @@ return (
 <AboutMePart colorCode="#4C383B" text="Cat owner" src="/bitmoji/cat.svg" direction="rtl"></AboutMePart>
 <AboutMePart colorCode="#EA5D42" text="Amateur guitar player" src="/bitmoji/guitarist.svg" direction="ltr"></AboutMePart>
 
+</section>
+
+<section className="bottomNavBar">
+    <CustomSpecialButton text="Games" onClick={()=>{}}></CustomSpecialButton>
+    <CustomSpecialButton text="My Rick&Morty Fan Arts" onClick={()=>{}}></CustomSpecialButton>
+    <CustomSpecialButton text="Memory Gallery" onClick={()=>{}}></CustomSpecialButton>
+    <CustomSpecialButton text="My Resume" onClick={()=>{}}></CustomSpecialButton>
 </section>
 
 </section>

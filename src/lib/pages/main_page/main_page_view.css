@@ -1,4 +1,7 @@
 .mainSection{
+margin-left: auto;
+width: max-content;
+margin-right: auto;
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 280px;
@@ -58,14 +61,46 @@ gap: 10px;
     border-radius: 40px;
 }
 
+.bottomNavBar{
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    bottom: 140px;
+    margin: 20px;
+    width: max-content;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #5b5b5b;
+    background-color: #FFE585;
+}
+
 @media only screen and (max-width:750px) {
 
     .mainSection{
+        width: 100%;
         display: block;
     }
 
+    .bottomNavBar{
+        position: relative;
+        bottom: 0px;
+        margin: 20px;
+        width: 80%;
+        padding: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 80px;
+    }
+
     .blogSection{
-        
         width: 90%;
         margin: 15px;
     } 
@@ -76,7 +111,7 @@ gap: 10px;
     .blogPreviews{
         padding-right: 10px;
         margin-top: 15px;
-        width: 95%;
+        width: 100%;
         height: 120px;
         overflow-x: auto; 
         overflow-y: hidden; 
