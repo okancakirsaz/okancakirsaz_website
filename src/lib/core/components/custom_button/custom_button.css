@@ -1,0 +1,32 @@
+.customButton{
+    --gradientFirst:#B783D5;
+    --gradientSecond:#651C8F;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 7px;
+    max-width: fit-content;
+    color:white;
+    min-width: 80px;
+    height: 40px;
+    background:linear-gradient(to right, var(--gradientFirst),var(--gradientSecond));
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow:var(--shadow);
+    cursor: pointer;
+}
+
+.customButton:hover, .customButton:active{
+    background:linear-gradient(to right, var(--gradientSecond),var(--gradientFirst));
+}
+
+
+
+@media only screen and (max-width:765px){
+   .customButton{
+    font-size: 13px;
+    height: 37px;
+    min-width: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+   }
+}

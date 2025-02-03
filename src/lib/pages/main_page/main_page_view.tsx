@@ -3,13 +3,15 @@ import Welcome from "./components/welcome/welcome";
 import "./main_page_view.css";
 import AboutMePart from './components/about_me/about_me_part';
 import CustomSpecialButton from "../../core/components/custom_special_button/custom_special_button";
+import { MainPageManager } from './main_page_manager';
 
 export default function MainPageView(){
+const manager:MainPageManager = new MainPageManager();
 return (
 <>
 <section className="mainSection">
 <section className="welcomeSection">
-<Welcome></Welcome>
+<Welcome manager={manager}></Welcome>
 </section>
 <section className="blogSection">
 <div className="sectionTitle"><span>Blogs</span><a className="blogsButton" href="/blogs">See All</a></div>

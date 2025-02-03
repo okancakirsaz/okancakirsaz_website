@@ -1,0 +1,83 @@
+.mainSectionOfGenerator{
+    width: max-content;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.screenSizeError{
+    display: none;
+}
+
+.modelGeneratorInput{
+    padding: 20px;
+    margin-right: 40px;
+    border-radius: 20px;
+    border: 1px dotted black;
+    width: 500px;
+    background-color: transparent;
+    height: 85vh
+}
+
+.inputTopRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.clearInput{
+    font-family: "Montserrat";
+    color: var(--red);
+    user-select: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#modelGeneratorTextArea, #modelGeneratorTextArea:focus{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: "Fira Code";
+    font-size: 15px;
+    height: 85%;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.inputBottomRow{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.modelGeneratorOutput{
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 300px;
+    background-color: transparent;
+    height: 85vh
+}
+
+@media only screen and (max-width:1024px){
+    .mainSectionOfGenerator{
+       display: none;
+    }
+    .screenSizeError{
+        display: flex;
+        justify-content: center;
+        width:100%;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        font-size: 20px;
+        font-family: "Passion One";
+    }
+}

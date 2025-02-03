@@ -1,7 +1,8 @@
 import CustomSpecialButton from "../../../../core/components/custom_special_button/custom_special_button";
+import { MainPageManager } from "../../main_page_manager";
 import "./welcome.css";
 
-export default function Welcome(){
+export default function Welcome({manager}:{manager:MainPageManager}){
 
     return (<>
         <div className="welcomeSheet">
@@ -11,7 +12,7 @@ export default function Welcome(){
             </span>
             <div style={{height:"140px"}}></div>
             <div className="buttonsRow">
-               <span id="modelGeneratorBtn"><CustomSpecialButton text="Model Generator" onClick={()=>console.log("Model Generator")}></CustomSpecialButton></span>
+               <span id="modelGeneratorBtn"><CustomSpecialButton text="Model Generator" onClick={()=>manager.navigate("model-generator")}></CustomSpecialButton></span>
                <CustomSpecialButton text="My Works" onClick={()=>console.log("My Works")}></CustomSpecialButton>
                <CustomSpecialButton text="Current Works" onClick={()=>console.log("Current Works")}></CustomSpecialButton>
                <CustomSpecialButton iconUrl="/icons/instagram.svg" text="instagram" onClick={()=>console.log("instagram")}></CustomSpecialButton>
