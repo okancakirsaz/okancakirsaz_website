@@ -1,15 +1,28 @@
 export default class ModelGeneratorManager{
     
+    textArea?:HTMLInputElement;
+    className?:HTMLInputElement;
     output?:HTMLElement;
 
     init(){
-        this.output = (document.getElementsByClassName("modelGeneratorOutput")[0] as HTMLElement)!;
+        this.output = (document.getElementsByClassName("outputArea")[0] as HTMLElement)!;
+        this.className  = (document.getElementById("modelNameInput") as HTMLInputElement);
+        this.textArea = (document.getElementById("modelGeneratorTextArea") as HTMLInputElement);
+    }
+
+    clearInputs(){
+        this.className!.value= "";
+        this.textArea!.value="";
+    }
+
+    copyOutput(){
+        navigator.clipboard.writeText(this.output!.textContent!);
+        this.output!.innerHTML ="Copied";
     }
 
     updateRowCounter(){
-        const textArea = (document.getElementById("modelGeneratorTextArea") as HTMLInputElement);
         const counter = document.getElementById("rowCounter");
-        const lines:number = textArea!.value.split(/\r?\n/).length;
+        const lines:number = this.textArea!.value.split(/\r?\n/).length;
         let numbers:string = "1- <br>";
 
         for(let i:number = 2; i<=lines;i++){
@@ -31,9 +44,10 @@ export default class ModelGeneratorManager{
     }
 
     generateTsObject(jsonObject:JSON):string{
-        const className:string = (document.getElementById("modelNameInput") as HTMLInputElement).value;
         let variables:string =""; 
-        let content:string = ""
+        let content:string = "";
+        let toJsonContent:string = "";
+        let fromJsonContent:string = "";
         if(Array.isArray(jsonObject)){
             content = "Array objects can't convert to typescript models.";
         }
@@ -45,17 +59,33 @@ export default class ModelGeneratorManager{
                 //Get values of these keys for separating data types
                 const value = jsonObject[e];
                 //Update "variables" variable
-                variables += e.toString() +":"+(typeof value).toString() + ";<br/>";
+                variables += e.toString() +"!"+":"+(typeof value).toString() + ";<br/>";
+                //Update "toJsonContent" variable
+                toJsonContent+= `"${e.toString()}":data.${e.toString()},<br/>`;
+                //Update "fromJsonContent" variable
+                fromJsonContent = `object.${e.toString()} = data["${e.toString()}"];<br/>`;
             });
         }
 
         //Update content
         content=`
-        export default class ${className} {
-        ${variables}\n
+        export default class ${this.className!.value}Dto {
+        ${variables}<br/>
+        static toJson(data:${this.className!.value}Dto):any{
+        return {${toJsonContent}};<br/>
+        }<br/><br/>
+
+        static fromJson(data:any):${this.className!.value}Dto{
+         const object: ${this.className!.value}Dto = new ${this.className!.value}Dto();
+         ${fromJsonContent}
+         return object;<br/>
+        }<br/><br/>
         }
         `
-        //TODO: Add toJson and fromJson methods
         return content;
     }
 }
+
+
+
+    

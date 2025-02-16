@@ -17,7 +17,7 @@ export default function ModelGeneratorView(){
         <div className="modelGeneratorInput">
         <div className="inputTopRow">
             <CustomTextField label="Model Name" id="modelNameInput"></CustomTextField>
-             <div className="clearInput">Clear</div>
+             <div className="clearInput" onClick={()=>manager.clearInputs()}>Clear</div>
         </div>
         <div className="inputMiddleRow">
         <div id="rowCounter">1-</div>
@@ -27,9 +27,14 @@ export default function ModelGeneratorView(){
         <CustomButton text="Generate" onClick={()=>manager.mapValue()}></CustomButton>
         </div>
         </div>
-        <code className="modelGeneratorOutput">
-            
-        </code>
+        <div className="modelGeneratorOutput">
+        <code className="outputArea">
+         
+         </code>
+         <CustomButton text="Copy" onClick={()=>manager.copyOutput()}></CustomButton>  
+        </div>
     </section>
     </>)
 }
+
+
