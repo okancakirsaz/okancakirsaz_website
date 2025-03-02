@@ -4,14 +4,18 @@ export default function CustomTextField({
   label,
   defaultValue,
   id,
+  type,
+  width,
 }: {
   label: string;
   defaultValue?:string;
   id: string;
+  type?:string
+  width?:string
 }) {
   return (
     <TextField
-    
+      type={type??"normal"}
       variant="outlined"
       defaultValue={defaultValue}
       label={label}
@@ -28,7 +32,8 @@ export default function CustomTextField({
           input:{
             backgroundColor: "#e6e6e6",
             fontFamily:"Montserrat",
-            fontSize:"13px"
+            fontSize:"13px",
+            width: width,
           },
           fieldSet: {
             borderTop: "none",

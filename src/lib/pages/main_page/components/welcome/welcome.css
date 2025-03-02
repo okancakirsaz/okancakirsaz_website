@@ -1,6 +1,6 @@
 .welcomeSheet {
   background-color: #282729; /* Dark grey */
-  font-family: "Passion One", sans-serif;
+  font-family: var(--font2);
   color: white;
   padding-left: 20px;
   padding-right: 50px;

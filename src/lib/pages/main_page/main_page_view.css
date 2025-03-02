@@ -33,7 +33,7 @@ gap: 10px;
 }
 
 .sectionTitle{
-    font-family: "Passion One", sans-serif;
+    font-family: var(--font2);
     font-size: 30px;
     display: flex;
     color: black;

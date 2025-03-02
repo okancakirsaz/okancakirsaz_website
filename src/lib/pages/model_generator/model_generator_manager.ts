@@ -1,10 +1,13 @@
-export default class ModelGeneratorManager{
+import { CoreManager } from "../../core/manager/core_manager";
+
+export default class ModelGeneratorManager extends CoreManager{
     
     textArea?:HTMLInputElement;
     className?:HTMLInputElement;
     output?:HTMLElement;
 
     init(){
+        this.setNewTitle("Model Generator");
         this.output = (document.getElementsByClassName("outputArea")[0] as HTMLElement)!;
         this.className  = (document.getElementById("modelNameInput") as HTMLInputElement);
         this.textArea = (document.getElementById("modelGeneratorTextArea") as HTMLInputElement);
