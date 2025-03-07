@@ -15,7 +15,7 @@ export default function PanelLoginView(){
     <img src="/bitmoji/suspicious.svg" className="suspLookImg"/>
     <div className="suspText">Are you really me?</div>
     <CustomTextField label="Prove it" id="adminLoginTextField" type="password" width="320px" />
-    <CustomButton text="Submit" onClick={()=>{}} />
+    <CustomButton text="Submit" onClick={async ()=> await manager.login()} />
     </section>
     </>)
 }
