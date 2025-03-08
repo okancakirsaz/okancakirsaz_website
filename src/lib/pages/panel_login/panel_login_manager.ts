@@ -12,10 +12,14 @@ init(){
     //TODO: Don't forget unfollow by robots
 }
 
-
-
 async login(){
-    await this.service.login(this.textInput!.value);
-    //TODO: Continue here
+   const response:boolean = await this.service.login(this.textInput!.value);
+   if(response){
+    localStorage.setItem("adminCredential","basardimorzbucocukları");
+    this.navigate("admin-panel");
+   }
+   else{
+    alert("Upss! Looks like someone trying to be a hacker.")
+   }
 }
 }

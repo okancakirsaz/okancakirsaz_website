@@ -1,12 +1,12 @@
 import axios, { AxiosResponse } from "axios";
 
 export default abstract class NetworkManager{
-    init(){
-
-    }
     //Migrate to an .env file
     private baseUrl:string = "http://localhost:3000";
     public subUrl = "";
+
+    init(){
+    }
 
     private setHeader(token:string):Record<string,any>{
         return {
