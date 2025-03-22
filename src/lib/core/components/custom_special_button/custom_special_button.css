@@ -1,5 +1,5 @@
 .customSpecialButton{
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font1);
     border-radius: 15px;
     max-width: fit-content;
     color:black;

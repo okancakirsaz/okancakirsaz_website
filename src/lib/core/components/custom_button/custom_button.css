@@ -1,7 +1,7 @@
 .customButton{
     --gradientFirst:#B783D5;
     --gradientSecond:#651C8F;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font1);
     border-radius: 7px;
     max-width: fit-content;
     color:white;

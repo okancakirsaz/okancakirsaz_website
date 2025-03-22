@@ -9,7 +9,6 @@ import BustedView from "./lib/pages/panel/busted/busted_view";
 import { ApplicationManager } from "./application_manager";
 
 await new ApplicationManager().init();
-
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
   <Routes>

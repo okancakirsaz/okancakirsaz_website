@@ -1,7 +1,19 @@
+import { useEffect } from "react";
+import BustedManager from "./busted_manager"
+import "./busted_view.css"
+
 
 export default function BustedView(){
-    return (<>
-    <iframe width="1228" height="691" src="https://www.youtube.com/embed/aPpH-fC23pQ" title="Candace, Vanessa - Busted (From &quot;Phineas and Ferb&quot;/Sing-Along)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    const manager:BustedManager = new BustedManager();
+    useEffect(()=>{
+    manager.getUserIpAndLocation();
+    })
+    return (
+    <>
+    <section className="bustedMainSect">
+    <iframe className="bustedFrame" width="1228" height="691" src="https://www.youtube.com/embed/aPpH-fC23pQ" title="Candace, Vanessa - Busted (From &quot;Phineas and Ferb&quot;/Sing-Along)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    <div className="credentialData" id="locationData"></div>
+    </section>
     </>
 )
 }

@@ -1,0 +1,21 @@
+.bustedMainSect{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font1);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bustedFrame{
+    margin-bottom: 50px;
+    min-width: 600px;
+    max-width: 50%;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 2px solid blueviolet; 
+}
