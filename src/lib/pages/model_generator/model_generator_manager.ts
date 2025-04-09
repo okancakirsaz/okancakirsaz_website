@@ -64,9 +64,9 @@ export default class ModelGeneratorManager extends CoreManager{
                 //Update "variables" variable
                 variables += e.toString() +"!"+":"+(typeof value).toString() + ";<br/>";
                 //Update "toJsonContent" variable
-                toJsonContent+= `"${e.toString()}":data.${e.toString()},<br/>`;
+                toJsonContent+= `"${e.toString()}":this.${e.toString()},<br/>`;
                 //Update "fromJsonContent" variable
-                fromJsonContent = `object.${e.toString()} = data["${e.toString()}"];<br/>`;
+                fromJsonContent += `object.${e.toString()} = data["${e.toString()}"];<br/>`;
             });
         }
 
@@ -74,7 +74,7 @@ export default class ModelGeneratorManager extends CoreManager{
         content=`
         export default class ${this.className!.value}Dto {
         ${variables}<br/>
-        static toJson(data:${this.className!.value}Dto):any{
+        toJson():any{
         return {${toJsonContent}};<br/>
         }<br/><br/>
 

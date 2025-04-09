@@ -19,6 +19,7 @@ export default abstract class NetworkManager{
 
    async postRequest(path:string,params:Record<string,any>,token?:string):Promise<any>{
    try {
+    console.log(`Here: ${this.baseUrl}/${this.subUrl}/${path}`)
     const request:AxiosResponse = await axios.post(`${this.baseUrl}/${this.subUrl}/${path}`,params, token!=null? this.setHeader(token):{});
     return request.data;
    } catch (error) {
